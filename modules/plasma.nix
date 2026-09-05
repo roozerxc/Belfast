@@ -37,13 +37,4 @@
     layout = "us,il";
     options = "grp:alt_shift_toggle";
   };
-
-  # Plasma theme
-  environment.systemPackages = with pkgs; [
-    papirus-icon-theme
-  ];
-
-  # KDE color scheme
-  environment.etc."xdg/color-schemes/Carl.colors".source =
-    ./plasma/Carl.colors;
 }
