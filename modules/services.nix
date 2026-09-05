@@ -88,10 +88,5 @@
   # flatpak
   services.flatpak = {
     enable = true;
-    packages = [
-      "us.zoom.Zoom"
-      "org.js.nuclear.Nuclear"
-      "com.dec05eba.gpu_screen_recorder"
-    ];
   };
 }
