@@ -1,74 +1,26 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    # CLI & Utils
-    nano
-    git
-    curl
-    wget
-    fastfetch
-    hyfetch
-    btop
-    mission-center
-    pika-backup
-    alsa-utils
-    pavucontrol
-    mangohud
-    gparted
-    neovim
-    starship
-    python3
-    ddrescue
-    smartmontools
+    environment.systemPackages = with pkgs; [
+        # CLI & Utils
+        fastfetch
+        nano
+        curl
+        wget
+        git
 
-    # Peripherals & Hardware
-    solaar
-    piper
-    virt-manager
+        # Data & Partitioning
+        gparted
+        ddrescue
+        smartmontools
 
-    # Gaming Launchers & Tools
-    heroic
-    (lutris.override {
-      extraPkgs = pkgs: [
-        wineWow64Packages.stable
-        winetricks
-      ];
-    })
-    bottles
-    prismlauncher
-    lact
-    protonup-qt
+        # Internet & Browser
+        librewolf
+    ];
 
-    # internet
-  signal-desktop
-  vesktop
-  librewolf
-  qbittorrent
-  localsend
+    # This is dependent on if proprietary/unfree packages can
+    # be allowed or disallowed for the nixOS installation. The
+    # user can always change this setting to their preferences.
 
-  # editing stuff
-    obs-studio
-    kdePackages.kdenlive
-    mpv
-    qview
-    cine
-    reaper
-    fooyin
-    jellyfin
-    audacity
-
-
-    # internet stuff
-    obsidian
-    libreoffice
-  onlyoffice-desktopeditors
-    peazip
-    bitwarden-desktop
-    ente-auth
-    proton-vpn
-
-  ];
-
-  nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfree = true;
 }
