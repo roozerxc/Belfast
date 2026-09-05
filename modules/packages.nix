@@ -16,6 +16,9 @@
 
         # Internet & Browser
         librewolf
+
+        # Audio Libraries
+        openal-soft
     ];
 
     # This is dependent on if proprietary/unfree packages can
