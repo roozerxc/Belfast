@@ -14,11 +14,4 @@
     variant = ",";
     options = "grp:alt_shift_toggle";
   };
-
-  users.users.visa = {
-    isNormalUser = true;
-    description = "visa";
-    extraGroups = [ "wheel" "networkmanager" "video" "audio" "libvirtd" ];
-    shell = pkgs.zsh;
-  };
 }
