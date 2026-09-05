@@ -43,9 +43,6 @@
     papirus-icon-theme
   ];
 
-  # Valkyrie wallpaper collection
-  environment.etc."valkyrie/wallpapers".source = ../media/wallpapers;
-
   # KDE color scheme
   environment.etc."xdg/color-schemes/Carl.colors".source =
     ./plasma/Carl.colors;
